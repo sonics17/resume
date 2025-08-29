@@ -1,0 +1,48 @@
+/* Contacts, Socials, Languages */
+.sidebar-section__title {
+  color: $text-tertiary;
+  margin-bottom: 1.25rem;
+}
+.sidebar-section__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+}
+
+/* ContactItem, SocialItem, LanguageItem */
+.sidebar-item {
+  display: grid;
+  grid-template: repeat(2, auto) / auto 1fr;
+  grid-template-areas: 
+    "icon label"
+    "icon value";
+  gap: 0.25rem 1rem;
+  align-items: start;
+}
+.sidebar-item__icon {
+  grid-area: icon;
+  width: 2rem;
+  height: auto;
+  align-self: center;
+}
+.sidebar-item__label {
+  grid-area: label;
+  color: $text-tertiary;
+}
+.sidebar-item__value {
+  grid-area: value;
+  color: $text-secondary;
+}
+
+
+/* main */
+.main-section__title {
+  margin-bottom: 2rem;
+  color: $text-primary;
+}
+
+@media(max-width: $lg) {
+  .main-section__title {
+    margin-bottom: 1rem;
+  }
+}

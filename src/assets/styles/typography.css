@@ -1,0 +1,117 @@
+:root {
+  /* font families */
+  --ff-heading: 'Outfit', 'Jost', sans-serif;
+  --ff-main: 'DM Sans', 'Jost', sans-serif;
+
+  /* template font sizes */
+  /* --fs-xxl: 2rem;
+  --fs-xl: 1.5rem;
+  --fs-l: 1.125rem;
+  --fs-m: 1rem;
+  --fs-s: 0.875rem;
+  --fs-xs: 0.75rem;
+  --fs-xxs: 0.625rem; */
+
+  /* increased font sizes */
+  --fs-xxl: 2.25rem;
+  --fs-xl: 1.875rem;
+  --fs-l: 1.5rem;
+  --fs-m: 1.25rem;
+  --fs-s: 1.125rem;
+  --fs-xs: 1rem;
+  --fs-xxs: 0.875rem;
+
+  /* line heights */
+  --lh-xxl: 1.4;
+  --lh-xl: 1.32;
+  --lh-l: 1.24;
+  --lh-m: 1.2;
+  --lh-s: 1.18;
+  --lh-xs: 1.16;
+  --lh-xxs: 1.2;
+
+  /* font weights */
+  --fw-regular: 400;
+  --fw-medium: 500;
+
+  /* letter spacings */
+  --ls-2: 0.02em;
+  --ls-1: 0.01em;
+  --ls-0: 0em;
+  --ls-n2: -0.02em;
+}
+
+
+h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-xxl);
+  line-height: var(--lh-xxl);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-n2);
+}
+
+h2 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-xl);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-1);
+}
+
+.sidebar h2 {
+  font-family: var(--ff-main);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-1);
+}
+
+
+.profile-text {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-l);
+  line-height: var(--lh-l);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-2);
+}
+
+.medium-text {
+  font-family: var(--ff-main);
+  font-size: var(--fs-m);
+  line-height: var(--lh-m);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-0);
+}
+
+.small-text {
+  font-family: var(--ff-main);
+  font-size: var(--fs-s);
+  line-height: var(--lh-s);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-0);
+}
+
+.projects-description-text,
+.certificates-main-text {
+  font-family: var(--ff-main);
+  font-size: var(--fs-s);
+  line-height: var(--lh-s);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-1);
+}
+
+.xsmall-text {
+  font-family: var(--ff-main);
+  font-size: var(--fs-xs);
+  line-height: var(--lh-xs);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-1);
+}
+
+.xxsmall-text {
+  font-family: var(--ff-main);
+  font-size: var(--fs-xxs);
+  line-height: var(--lh-xxs);
+  font-weight: var(--fw-regular);
+  letter-spacing: var(--ls-1);
+}

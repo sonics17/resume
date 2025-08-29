@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Outfit';
+  src: url(../fonts/Outfit-Medium.woff2);
+}
+
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url(../fonts/DMSans-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url(../fonts/DMSans-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url(../fonts/Jost-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url(../fonts/Jost-Medium.woff2);
+  font-weight: 500;
+}

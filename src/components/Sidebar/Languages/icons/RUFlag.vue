@@ -1,0 +1,12 @@
+<template>
+  <svg width="65" height="45" viewBox="0 0 65 45" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="clipRounded">
+        <rect width="65" height="45" rx="5" ry="5"/>
+      </clipPath>
+    </defs>
+    <rect width="65" height="45" fill="#FFFFFF" clip-path="url(#clipRounded)"/>
+    <rect y="15" width="65" height="15" fill="#0033A0" clip-path="url(#clipRounded)"/>
+    <rect y="30" width="65" height="15" fill="#D52B1E" clip-path="url(#clipRounded)"/>
+  </svg>
+</template>
