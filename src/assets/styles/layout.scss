@@ -3,6 +3,7 @@
   color: $text-tertiary;
   margin-bottom: 1.25rem;
 }
+
 .sidebar-section__list {
   display: flex;
   flex-direction: column;
@@ -19,16 +20,19 @@
   gap: 0.25rem 1rem;
   align-items: start;
 }
+
 .sidebar-item__icon {
   grid-area: icon;
   width: 2rem;
   height: auto;
   align-self: center;
 }
+
 .sidebar-item__label {
   grid-area: label;
   color: $text-tertiary;
 }
+
 .sidebar-item__value {
   grid-area: value;
   color: $text-secondary;

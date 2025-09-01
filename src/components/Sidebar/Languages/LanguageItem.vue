@@ -4,7 +4,6 @@
     <p class="sidebar-item__value language-item__value small-text">{{ name }}</p>
     <p class="sidebar-item__label language-item__label xsmall-text">{{ level }}</p>
   </li>
-
 </template>
 
 <script>

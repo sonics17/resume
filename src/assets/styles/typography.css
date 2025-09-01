@@ -41,7 +41,6 @@
   --ls-n2: -0.02em;
 }
 
-
 h1 {
   font-family: var(--ff-heading);
   font-size: var(--fs-xxl);
@@ -65,7 +64,6 @@ h2 {
   font-weight: var(--fw-regular);
   letter-spacing: var(--ls-1);
 }
-
 
 .profile-text {
   font-family: var(--ff-heading);
