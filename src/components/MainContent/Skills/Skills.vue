@@ -4,22 +4,22 @@
     <SkillItem 
       v-for="(skill, index) in skills" 
       :key="index"
-      :skill="skill" 
+      :name="skill.name"
+      :icon="skill.icon"
+      :description="skill.description"
     />
-
   </ul>
-
 </template>
 
 <script>
-import htmlLogo from '@/assets/images/skills/html.png';
-import cssLogo from '@/assets/images/skills/css.png';
-import javascriptLogo from '@/assets/images/skills/javascript.png';
-import vueLogo from '@/assets/images/skills/vue.png';
-import gitLogo from '@/assets/images/skills/git.png';
-import figmaLogo from '@/assets/images/skills/figma.png';
-import pythonLogo from '@/assets/images/skills/python.png';
-import postgresqlLogo from '@/assets/images/skills/postgresql.png';
+import HtmlIcon from '@/assets/images/skills/html.png';
+import CssIcon from '@/assets/images/skills/css.png';
+import JavascriptIcon from '@/assets/images/skills/javascript.png';
+import VueIcon from '@/assets/images/skills/vue.png';
+import GitIcon from '@/assets/images/skills/git.png';
+import FigmaIcon from '@/assets/images/skills/figma.png';
+import PythonIcon from '@/assets/images/skills/python.png';
+import PostgresqlIcon from '@/assets/images/skills/postgresql.png';
 import SkillItem from './SkillItem.vue';
 
 export default {
@@ -29,42 +29,42 @@ export default {
       skills: [
         {
           name: 'HTML',
-          logo: htmlLogo,
+          icon: HtmlIcon,
           description: 'Семантическая верстка, структура'
         },
         {
           name: 'CSS',
-          logo: cssLogo,
+          icon: CssIcon,
           description: 'Стили, анимации, адаптивный дизайн'
         },
         {
           name: 'JavaScript',
-          logo: javascriptLogo,
+          icon: JavascriptIcon,
           description: 'Интерактивность и логика'
         },
         {
           name: 'Vue.js',
-          logo: vueLogo,
+          icon: VueIcon,
           description: 'Компонентная разработка'
         },
         {
           name: 'Git',
-          logo: gitLogo,
+          icon: GitIcon,
           description: 'Контроль версий'
         },
         {
           name: 'PostgreSQL',
-          logo: postgresqlLogo,
+          icon: PostgresqlIcon,
           description: 'Базы данных и запросы'
         },
         {
           name: 'Python',
-          logo: pythonLogo,
+          icon: PythonIcon,
           description: 'Скрипты и автоматизация'
         },
         {
           name: 'Figma',
-          logo: figmaLogo,
+          icon: FigmaIcon,
           description: 'UI/UX дизайн'
         }
       ]
@@ -73,27 +73,31 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .skills-section__list {
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   gap: 0.5rem;
 }
+
 @media (max-width: $skils-break) {
   .skills-section__list{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media(max-width: $lg) {
   .skills-section__list{
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media(max-width: $md) {
   .skills-section__list{
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media(max-width: $xs) {
   .skills-section__list{
     grid-template-columns: 1fr;

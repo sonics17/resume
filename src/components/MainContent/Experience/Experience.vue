@@ -4,27 +4,28 @@
     <ExperienceItem
       v-for="(experience, index) in experienceItems"
       :key="index"
-      :experience="experience"
+      :logo="experience.logo"
+      :period="experience.period"
+      :location="experience.location"
+      :role="experience.role"
+      :company="experience.company"
+      :description="experience.description"
     />
   </ul>
-
 </template>
 
 <script>
 import ExperienceItem from './ExperienceItem.vue';
-import argunSoftLogo from '@/assets/images/logos/argun-soft.png';
-import kbLogo from '@/assets/images/logos/kb.svg';
-
+import ArgunSoftLogo from '@/assets/images/logos/argun-soft.png';
+import KBLogo from '@/assets/images/logos/kb.svg';
 
 export default {
-  components: {
-    ExperienceItem
-  },
+  components: {ExperienceItem},
   data() {
     return {
       experienceItems:[
           {
-          logo: kbLogo,
+          logo: KBLogo,
           period: 'Настоящее время',
           location: 'Онлайн',
           role: 'Менеджер',
@@ -32,7 +33,7 @@ export default {
           description: 'Ведение и актуализация баз данных. Подготовка и систематизация отчетной документации. Автоматизация рутинных операций с использованием скриптов.'
         },
         {
-          logo: argunSoftLogo,
+          logo: ArgunSoftLogo,
           period: 'Сентябрь 2022 - Июнь 2023',
           location: 'Санкт-Петербург',
           role: 'Ассистент ведущего специалиста',
@@ -45,12 +46,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .experience-section__list {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
-
-
 </style>

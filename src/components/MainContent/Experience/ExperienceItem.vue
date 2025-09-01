@@ -4,48 +4,51 @@
     <div class="experience-item__content">
       <div class="experience-item__info">
         <div class="experience-item__top">
-          <p class="experience-item__period xxsmall-text" :class="{'experience-item__period--present': isPresent}">{{ experience.period }}</p>
-          <p class="experience-item__location xxsmall-text">{{ experience.location }}</p>
+          <p class="experience-item__period xxsmall-text" :class="{'experience-item__period--present': isPresent}">{{ period }}</p>
+          <p class="experience-item__location xxsmall-text">{{ location }}</p>
         </div>
         <div class="experience-item__bottom">
-          <img :src="experience.logo" alt="company-logo" class="experience-item__logo">
-          <p class="experience-item__company small-text">{{ experience.company }}</p>
-          <h3 class="experience-item__role xsmall-text">{{ experience.role }}</h3>
+          <img :src="logo" alt="company-logo" class="experience-item__logo">
+          <p class="experience-item__company small-text">{{ company }}</p>
+          <h3 class="experience-item__role xsmall-text">{{ role }}</h3>
         </div>
       </div>
-      <p class="experience-item__description xsmall-text">{{ experience.description }}</p>
+      <p class="experience-item__description xsmall-text">{{ description }}</p>
     </div>
   </li>
-
 </template>
 
 <script>
-
 export default {
   props: {
-    experience: {
-      type: Object
-    }
+      logo: String,
+      period: String,
+      location: String,
+      role: String,
+      company: String,
+      description: String
   },
   computed: {
     isPresent() {
-      const period = this.experience.period.toLowerCase();
+      const period = this.period.toLowerCase();
       return period.includes('настоящее время') || period.includes('present');
     }
   }
 }
 </script>
 
-<style lang="scss"> 
+<style lang="scss" scoped> 
 .experience-item {
   display: grid;
   grid-template-columns: 24px 1fr;
   gap: 1rem;
   position: relative;
 }
+
 .experience-item__marker {
   position: relative;
 }
+
 .experience-item__marker::before {
   content: '';
   position: absolute;
@@ -57,6 +60,7 @@ export default {
   background: $text-primary;
   border-radius: 50%;
 }
+
 .experience-item__marker::after {
   content: '';
   position: absolute;
@@ -67,6 +71,7 @@ export default {
   width: 1px;
   background: #F7F9FC;
 }
+
 .experience-item__content {
   display: flex;
   gap: 0.5rem;
@@ -78,15 +83,18 @@ export default {
   flex: 0 0 35%;
   max-width: 280px;
 }
+
 .experience-item__top {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
   margin-bottom: 0.5rem;
 }
+
 .experience-item__period {
   color: $text-secondary;
 }
+
 .experience-item__period--present {
   color: #9251F7;
   position: relative;
@@ -106,9 +114,11 @@ export default {
   margin-right: 0.5em;
   vertical-align: middle;
 }
+
 .experience-item__location {
   color: $text-tertiary;
 }
+
 .experience-item__bottom {
   display: grid;
   grid-template: repeat(2, auto) / 48px auto;
@@ -118,20 +128,24 @@ export default {
   align-items: center;
   gap: 0.25rem 1rem;
 }
+
 .experience-item__logo {
   width: 48px;
   height: auto;
   object-fit: contain;
   grid-area: logo;
 }
+
 .experience-item__company {
   grid-area: company;
   color: $text-primary;
 }
+
 .experience-item__role {
   grid-area: role;
   color: $text-tertiary;
 }
+
 .experience-item__description {
   flex: 1;
   color: $text-tertiary;
@@ -142,6 +156,7 @@ export default {
     flex-direction: column;
   }
 }
+
 @media(max-width: $sm) {
   .experience-item {
     gap: 0.25rem;

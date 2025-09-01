@@ -4,10 +4,12 @@
     <CertificateItem 
       v-for="(certificate, index) in certificates"
       :key="index"
-      :certificate="certificate"
+      :icon="certificate.icon"
+      :name="certificate.name"
+      :author="certificate.author"
+      :period="certificate.period"
     />
   </ul>
-
 </template>
 
 <script>
@@ -38,7 +40,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .certificates-section__list {
   display: flex;
   flex-direction: column;
@@ -47,5 +49,4 @@ export default {
   justify-content: center;
   width: 100%;
 }
-
 </style>

@@ -5,35 +5,36 @@
         <SocialItem
         v-for="(social, index) in socials" 
         :key="index"
-        :social="social"
+        :name="social.name"
+        :href="social.href"
+        :username="social.username"
+        :icon="social.icon"
       />
     </ul>
   </section>
 </template>
 
 <script>
-import { markRaw } from 'vue'
 import SocialItem from './SocialItem.vue';
-import TelegramIcon from './icons/TelegramIcon.vue';
-import GithubIcon from './icons/GithubIcon.vue';
+import TelegramIcon from '@/assets/images/icons/socials/telegram.svg';
+import GithubIcon from '@/assets/images/icons/socials/github.svg';
 
 export default {
   components: {SocialItem},
-
   data() {
     return {
       socials: [
         {
-          label: 'Telegram',
+          name: 'Telegram',
           href: 'https://t.me/soniaryze',
-          value: '@soniaryze',
-          icon: markRaw(TelegramIcon)
+          username: '@soniaryze',
+          icon: TelegramIcon
         },
         {
-          label: 'Github',
+          name: 'GitHub',
           href: 'https://github.com/sonics17',
-          value: '@sonics17',
-          icon: markRaw(GithubIcon)
+          username: '@sonics17',
+          icon: GithubIcon
         }
       ]
     }

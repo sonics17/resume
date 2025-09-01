@@ -4,32 +4,32 @@
     <LanguageItem 
       v-for="(language, index) in languages" 
       :key="index"
-      :language="language"
+      :name="language.name"
+      :level="language.level"
+      :icon="language.icon"
     />
   </ul>
 </template>
 
 <script>
-import { markRaw } from 'vue'
-import RUFlag from './icons/RUFlag.vue';
-import UKFlag from './icons/UKFlag.vue';
 import LanguageItem from './LanguageItem.vue';
+import RUFlag from '@/assets/images/icons/languages/ru.svg';
+import UKFlag from '@/assets/images/icons/languages/en.svg';
 
 export default {
   components: {LanguageItem}, 
-
   data() {
     return {
       languages: [
         {
-          value: 'Русский',
-          label: 'Родной',
-          icon: markRaw(RUFlag)
+          name: 'Русский',
+          level: 'Родной',
+          icon: RUFlag
         },
         {
-          value: 'Английский',
-          label: 'B1 — Средний',
-          icon: markRaw(UKFlag)
+          name: 'Английский',
+          level: 'B1 — Средний',
+          icon: UKFlag
         }
       ]
     }

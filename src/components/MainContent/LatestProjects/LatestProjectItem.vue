@@ -1,28 +1,28 @@
 <template>
   <li class="project-item">
     <div class="project-item__content">
-      <img :src="project.icon" :alt="project.name" class="project-item__icon">
+      <img :src="icon" :alt="name" class="project-item__icon">
       <div class="project-item__text">
-        <p class="project-item__name medium-text">{{ project.name }}</p>
-        <p class="project-item__descriiption small-text">{{ project.description }}</p>
+        <p class="project-item__name medium-text">{{ name }}</p>
+        <p class="project-item__description small-text">{{ description }}</p>
       </div>
     </div>
-    <a :href="project.href" target="_blank" class="project-item__link medium-text">{{ project.href }}</a>
+    <a :href="href" target="_blank" class="project-item__link medium-text">{{ href }}</a>
   </li>
-
 </template>
 
 <script>
 export default {
   props: {
-    project: {
-      type: Object
-    }
+    name: String,
+    description: String,
+    href: String,
+    icon: String
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .project-item {
   background-color: #F7F9FC;
   padding: 1.5rem;
@@ -35,23 +35,28 @@ export default {
   gap: 1rem;
   justify-content: space-between;
 }
+
 .project-item__content {
   display: flex;
   gap: 1rem;
   align-items: start;
 }
+
 .project-item__icon {
   width: 3rem;
   height: auto;
   object-fit: contain;
 }
+
 .project-item__name {
   color: $text-primary;
   margin-bottom: 0.25rem;
 }
-.project-item__descriiption {
+
+.project-item__description {
   color: $text-tertiary;
 }
+
 .project-item__link {
   color: #516CF7;
   display: inline-flex;
@@ -59,6 +64,7 @@ export default {
   overflow-wrap: anywhere;
   align-items: start;
 }
+
 .project-item__link::before {
   content: '';
   flex-shrink: 0;
@@ -85,12 +91,14 @@ export default {
     max-width: 100%;
   }
 }
+
 @media(max-width: $lg) {
   .project-item {
     flex: 1 1 calc(50% - 0.375rem);
     max-width: calc(50% - 0.375rem);
   }
 }
+
 @media(max-width: $md) {
   .project-item {
     flex: 1 1 100%;

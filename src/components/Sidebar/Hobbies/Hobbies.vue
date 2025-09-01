@@ -4,40 +4,39 @@
     <HobbyItem 
       v-for="(hobby, index) in hobbies" 
       :key="index"
-      :hobby="hobby"
+      :name="hobby.name"
+      :icon="hobby.icon"
     />
   </ul>
 </template>
 
 <script>
-import { markRaw } from 'vue'
 import HobbyItem from './HobbyItem.vue';
-import BoardGameIcon from './icons/BoardGameIcon.vue';
-import BrushIcon from './icons/BrushIcon.vue';
-import WalkingIcon from './icons/WalkingIcon.vue';
-import DumbbellIcon from './icons/DumbbellIcon.vue';
+import DiceIcon from '@/assets/images/icons/hobbies/dice.svg';
+import DumbbellIcon from '@/assets/images/icons/hobbies/dumbbell.svg';
+import BrushIcon from '@/assets/images/icons/hobbies/brush.svg';
+import WalkingIcon from '@/assets/images/icons/hobbies/walking-girl.svg';
 
 export default {
   components: {HobbyItem},
-
   data() {
     return {
       hobbies: [
         {
-          value: 'Настольные игры',
-          icon: markRaw(BoardGameIcon)
+          name: 'Настольные игры',
+          icon: DiceIcon
         },
         {
-          value: 'Спорт',
-          icon: markRaw(DumbbellIcon)
+          name: 'Спорт',
+          icon: DumbbellIcon
         },
         {
-          value: 'Рисование',
-          icon: markRaw(BrushIcon)
+          name: 'Рисование',
+          icon: BrushIcon
         },
         {
-          value: 'Прогулки с подкастами',
-          icon: markRaw(WalkingIcon)
+          name: 'Прогулки с подкастами',
+          icon: WalkingIcon
         }
       ]
     }

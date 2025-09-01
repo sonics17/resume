@@ -1,15 +1,19 @@
 <template>
   <aside class="sidebar">
     <ProfileCard />
+
     <section class="sidebar-section">
       <Contacts />
     </section>
+
     <section class="sidebar-section">
       <Socials />
     </section>
+
     <section class="sidebar-section">
       <Languages />
     </section>
+
     <section class="sidebar-section">
       <Hobbies />
     </section>
@@ -34,14 +38,14 @@ export default {
 }
 </script>
 
-
-<style lang="scss">
+<style lang="scss" scoped>
 .sidebar {
   background-color: #F7F9FC;
   padding: 48px 16px 48px 48px;
   min-height: 100vh;
   box-sizing: border-box;
 }
+
 .sidebar-section {
   position: relative;
   padding: calc(2rem + 1px) 0;
@@ -65,9 +69,11 @@ export default {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
+
   .sidebar-section {
     padding: 0;
   }
+
   .sidebar > .sidebar-section::before {
     display: none;
   }
@@ -78,9 +84,11 @@ export default {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+
   .sidebar-section {
     padding-top: 1rem;
   }
+  
   .sidebar > .sidebar-section::before {
     display: block;
     width: 100%;
